@@ -1,0 +1,62 @@
+@import '../../../sass/style.scss';
+
+.footer{
+    @include flex(flex-end, space-between);
+    position: relative;
+    margin-block: auto clamp(1.6rem, 8vw, 2.6rem);
+    position: relative;
+    
+    
+    @media screen and (max-width: 800px) {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__child{
+        @include flex(unset, center);
+        flex-direction: column;
+        gap: .8rem;
+
+        .fc-header{
+            color: $dark-grey;
+        }
+        .fc-body{
+            @include flex(center, unset);
+            line-height: 1.38rem;
+            gap: 2.5rem;
+
+            p span{
+                color: $dark-grey;
+            }
+            p a{
+                color: $tinted-black;
+            }
+        }
+    }
+   
+    &__page-msg{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-professional-links{
+        @include flex(center, unset);
+        gap: 1.2rem;
+    }
+}
+
+//Mobile view 
+
+@media screen and (max-width: 800px) {
+    .footer .fc-body{
+        row-gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+    .footer__contact{
+        margin-bottom: 3.5rem;
+    }
+    .footer__page-msg{
+        position: relative;
+        display: none;
+    }
+
+}

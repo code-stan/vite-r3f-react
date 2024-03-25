@@ -1,0 +1,45 @@
+html, body{
+  overflow-x: hidden;
+  max-width: breakpoint("LGdesktop");
+  margin-inline: auto;
+
+
+}
+html{
+  font-size: calc(100vw / 1366  * 10);
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+    @media screen and (max-width: breakpoint("tablet")) {
+        font-size: 62.5%;
+    }
+    @media screen and (max-width: 375px) {
+        font-size: calc(100vw / 375  * 10);
+    }
+    
+    
+}
+// resets
+body {
+  font-family: $ff-primary, sans-serif;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    -webkit-user-drag: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+}
+
+.target{
+    font-kerning: none;
+}
+.line{
+    overflow: hidden;
+}

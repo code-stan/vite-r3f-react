@@ -1,5 +1,21 @@
-@mixin media($size){
-     @media screen and (width#{$size}) {
+@mixin media($range: "min", $size){
+     @if $range == "min"{
+          @media screen and (min-width: $size) {
+               @content
+          }
+     };
+     @media screen and (max-width: $size) {
           @content
      }
+};
+
+@mixin flex($align, $justify, $gap: 0rem){
+     display: flex;
+     align-items: $align;
+     justify-content: $justify;
+     gap: $gap;
+};
+
+@function letter-spacing($space, $fs){
+     @return calc(($space / 100) * $fs)
 }

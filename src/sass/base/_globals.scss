@@ -1,8 +1,7 @@
 html, body{
-  overflow-x: hidden;
-  max-width: breakpoint("LGdesktop");
-  margin-inline: auto;
-
+    overflow-x: hidden;
+    max-width: breakpoint("LGdesktop");
+    margin-inline: auto;
 
 }
 html{
@@ -11,6 +10,9 @@ html{
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
+    @media screen and (min-width: breakpoint("LGdesktop")) {
+        font-size: 62.5%;
+    }
     @media screen and (max-width: breakpoint("tablet")) {
         font-size: 62.5%;
     }
@@ -22,9 +24,16 @@ html{
 }
 // resets
 body {
-  font-family: $ff-primary, sans-serif;
-  min-height: 100vh;
-  font-size: 1.6rem;
+    font-family: $ff-primary, sans-serif;
+    color: $black;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    padding-inline: 2.5%;
+    font-weight: 400;
+
+    @media screen and (width <= breakpoint("tablet")){
+    padding-inline: 4%;
+    }
 }
 
 img{

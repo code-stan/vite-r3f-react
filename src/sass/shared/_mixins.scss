@@ -1,10 +1,12 @@
+@use "../utils/breakpoints" as b;
+
 @mixin media($range: "min", $size){
      @if $range == "min"{
-          @media screen and (min-width: $size) {
+          @media screen and (min-width: b.breakpoint($size)) {
                @content
           }
      };
-     @media screen and (max-width: $size) {
+     @media screen and (max-width: b.breakpoint($size)) {
           @content
      }
 };

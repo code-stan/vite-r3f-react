@@ -11,13 +11,23 @@
      }
 };
 
-@mixin flex($align, $justify, $gap: 0rem){
+@mixin flex($align, $justify, $gap: 0rem, $fd: "row"){
      display: flex;
      align-items: $align;
      justify-content: $justify;
      gap: $gap;
+     flex-direction: $fd;
 };
 
+@mixin pg-spacing-inline($bmt){
+     #{$bmt}-inline: 2.5%;
+
+     @media screen and (width <= breakpoint("tablet")){
+          #{$bmt}-inline: 5%;
+     }
+}
 @function letter-spacing($space, $fs){
      @return calc(($space / 100) * $fs)
-}
+};
+
+//shared placeholders

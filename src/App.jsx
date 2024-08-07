@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
-import SmoothScroll from "./components/utils/SmoothScroll";
+import SmoothScroll from "./utils/SmoothScroll";
 
 function App() {
 

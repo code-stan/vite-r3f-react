@@ -2,7 +2,7 @@ $breakpoints: (
     "phone": 550px,
     "tablet": 800px,
     "desktop": 1366px,
-    "LGdesktop": 2220px
+    "LGdesktop": 1920px
 );
 
 @function breakpoint($name) {
